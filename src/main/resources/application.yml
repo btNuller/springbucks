@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-bucks
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://prd.peactor.com:3306/bucks?autoReconnect=true&useSSL=false
+    username: root
+    password: hhb8002314019
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 5
+      idle-timeout: 60000
+      connection-timeout: 30000
+      max-lifetime: 1800000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, beans
+server:
+  port: 80
